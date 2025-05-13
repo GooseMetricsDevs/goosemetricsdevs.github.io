@@ -1,42 +1,180 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>GooseMetrics - Coming Soon!!</title>
-<meta name="description" content="GooseMetrics Page Coming Soon">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"> 
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<!-- adding the GooseMetrics favicon -->
-<link rel="icon" href="images/GooseMetricsFirstLogoDraftBlackPNG.png" type="image/png">
+  <meta charset="utf-8">
+  <title>GooseMetrics - Coming Soon!!</title>
+  <meta name="description" content="GooseMetrics Page Coming Soon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="icon" href="images/GooseMetricsFirstLogoDraftBlackPNG.png" type="image/png">
 </head>
 
 <body id="home">
-<div id="Header">
-<div class="wrapper">
-	<h1>Welcome to GooseMetrics™</h1>	
-	</div>
-</div>
-<div id="Content" class="wrapper"> 
-<div class="countdown styled"></div> 
-<h2 class="intro">Our website is currently under development as we’re building something exciting from the ground up! 🚀 <br> We’re working hard to create a great experience, and we can’t wait to share it with you. Please check back soon for updates 🪿💡</h2>
-<h3> In the meantime, feel free to reach out to us:</h3>
-<ul>
-        <li>Info Desk: <a href="mailto:contact@goosemetrics.com">contact@goosemetrics.com</a> 📧</li>
-        <li>Help Centre: <a href="mailto:support@goosemetrics.com">support@goosemetrics.com</a> 📧</li>
-        <li>Accounts Office: <a href="mailto:finance@goosemetrics.com">finance@goosemetrics.com</a> 📧</li>
-        <li>Talent Acquisition: <a href="mailto:opportunities@goosemetrics.com">opportunities@goosemetrics.com</a> 📧</li>
-</ul>
-<p class="signoff">See you soon, <br> GooseMetrics™</p>
-</div>
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <header>
+      <h1>Welcome to <span class="logo-highlight">GooseMetrics</span></h1>
+    </header>
 
-<div id="overlay"></div>
+    <div class="main-content">
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">30</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">24</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">60</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds"></span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
 
-<!--Scripts-->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/Backstretch.js"></script>
-<script type="text/javascript" src="js/jquery.countdown.js"></script>
-<script type="text/javascript" src="js/global.js"></script>
+      <h2 class="intro">Our website is currently under development as we're building something exciting from the ground up! 🚀 <br> We're working hard to create a great experience, and we can't wait to share it with you. Please check back soon for updates 🪿💡</h2>
+      
+      <div class="progress-container">
+        <div class="progress-text">Development Progress: 50%</div>
+        <div class="progress-bar"></div>
+      </div>
+      
+      <div class="contact-section">
+        <h3>In the meantime, feel free to reach out to us:</h3>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <i class="fas fa-info-circle"></i>
+            Info Desk: <a href="mailto:contact@goosemetrics.com">contact@goosemetrics.com</a>
+          </li>
+          <li class="contact-item">
+            <i class="fas fa-question-circle"></i>
+            Help Centre: <a href="mailto:support@goosemetrics.com">support@goosemetrics.com</a>
+          </li>
+          <li class="contact-item">
+            <i class="fas fa-file-invoice-dollar"></i>
+            Accounts Office: <a href="mailto:finance@goosemetrics.com">finance@goosemetrics.com</a>
+          </li>
+          <li class="contact-item">
+            <i class="fas fa-user-plus"></i>
+            Talent Acquisition: <a href="mailto:opportunities@goosemetrics.com">opportunities@goosemetrics.com</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/goosemetrics" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/goosemetrics" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      
+      <p class="signoff">See you soon, <br> <span class="logo-highlight">GooseMetrics</span></p>
+    </div>
+    
+    <footer>
+      &copy; 2025 GooseMetrics™. All rights reserved.
+    </footer>
+  </div>
 
+  <script>
+    // Create floating goose emojis
+    function createFloatingGoose() {
+      const goose = document.createElement('div');
+      goose.className = 'goose-float';
+      goose.textContent = '🪿';
+      goose.style.left = Math.random() * 100 + 'vw';
+      goose.style.top = Math.random() * 100 + 'vh';
+      goose.style.animationDuration = 15 + Math.random() * 30 + 's';
+      goose.style.opacity = 0.3 + Math.random() * 0.5;
+      goose.style.fontSize = 20 + Math.random() * 30 + 'px';
+      document.body.appendChild(goose);
+      
+      // Remove after animation
+      setTimeout(() => {
+        goose.remove();
+      }, 50000);
+    }
+    
+    // Create stars background
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.style.position = 'absolute';
+        star.style.width = (Math.random() * 3) + 'px';
+        star.style.height = star.style.width;
+        star.style.backgroundColor = 'white';
+        star.style.borderRadius = '50%';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.opacity = Math.random() * 0.8;
+        star.style.animation = `twinkle ${2 + Math.random() * 4}s infinite alternate`;
+        stars.appendChild(star);
+      }
+    }
+    
+    // Add keyframes for twinkling stars
+    const styleSheet = document.createElement('style');
+    styleSheet.type = 'text/css';
+    styleSheet.innerText = `
+      @keyframes twinkle {
+        from { opacity: 0.2; }
+        to { opacity: 0.8; }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+    
+    // Countdown timer
+    function updateCountdown() {
+      // Set the launch date to August 31, 2025
+      const launchDate = new Date("August 31, 2025 00:00:00").getTime();
+      
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
+      
+      if (distance < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById('countdown').innerHTML = `<h2>We are live!</h2>`;
+      }
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      
+      // Create floating goose emojis periodically
+      setInterval(createFloatingGoose, 5000);
+      createFloatingGoose(); // Create one immediately
+      
+      // Start countdown
+      updateCountdown();
+      const countdownTimer = setInterval(updateCountdown, 1000);
+      
+      // Add random movement to the progress bar
+      setInterval(() => {
+        const progressBar = document.querySelector('.progress-bar');
+        const currentWidth = parseFloat(progressBar.style.width || '50%');
+        const newWidth = currentWidth + (Math.random() * 0.5 - 0.25);
+        if (newWidth > 45 && newWidth < 55) {
+          progressBar.style.width = newWidth + '%';
+        }
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
